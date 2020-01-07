@@ -66,6 +66,12 @@ model.compile(loss="sparse_categorical_crossentropy",
 
 # Training the model, with 40 iterations
 # validation_split corresponds to the percentage of images used for the validation phase compared to all the images
+
+IMG_SIZE = 50
+X = np.array(X).reshape(-1, IMG_SIZE, IMG_SIZE, 1)
+y = np.array(y)
+
+
 history = model.fit(X, y, batch_size=32, epochs=40, validation_split=0.1)
 
 
