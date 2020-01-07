@@ -57,7 +57,7 @@ model.add(Activation("softmax"))
 # Compiling the model using some basic parameters
 model.compile(loss="sparse_categorical_crossentropy",
 				optimizer="adam",
-				metrics=["accuracy"])
+				metrics=["acc"])
 
 
 
@@ -88,13 +88,13 @@ print("Saved model to disk")
 model.save('CNN.model')
 
 
-# Printing a graph showing the accuracy changes during the training phase
+# Printing a graph showing the accuracyuracyuracyuracy changes during the training phase
 print(history.history.keys())
 plt.figure(1)
 plt.plot(history.history['acc'])
 plt.plot(history.history['val_acc'])
-plt.title('model accuracy')
-plt.ylabel('accuracy')
+plt.title('model acc')
+plt.ylabel('acc')
 plt.xlabel('epoch')
 plt.legend(['train', 'validation'], loc='upper left')
 
