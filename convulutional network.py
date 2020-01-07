@@ -49,7 +49,7 @@ model.add(Activation("relu"))
 model.add(Dense(128))
 model.add(Activation("relu"))
 
-# The output layer with 13 neurons, for 13 classes
+# The output layer with 3 neurons, for 3 classes
 model.add(Dense(3))
 model.add(Activation("softmax"))
 
